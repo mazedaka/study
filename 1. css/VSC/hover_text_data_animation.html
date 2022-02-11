@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {margin: 0; padding: 0;}
+    .container {display: flex; justify-content: center; align-items: center; height: 100vh;}
+    ul {padding: 0; margin: 0;}
+    li {list-style: none; margin: 40px 0;}
+    li a {font-size: 90px; text-decoration: none; color: lightgray; font-weight: bold; position: relative;}
+    li a::before {content: attr(data-text); position: absolute; top: 0; left: 0; color: cornflowerblue; width: 0; white-space: nowrap; overflow: hidden; transition: 0.3s;}
+    li a:hover::before {width: 100%;}
+
+    li[data-animation="to-left"] a {color: cornflowerblue;}
+    li[data-animation="to-left"] a::before {color: lightgray; width: 100%;}
+    li[data-animation="to-left"] a:hover::before {width: 0;}
+
+    li[data-animation="to-top"] a {color: cornflowerblue;}
+    li[data-animation="to-top"] a::before {color: lightgray; width: 100%; height: 100%;}
+    li[data-animation="to-top"] a:hover::before {width: 100%; height: 0;}
+
+    li[data-animation="to-bottom"] a {color: lightgray;}
+    li[data-animation="to-bottom"] a::before {color: cornflowerblue; width: 100%; height: 0;}
+    li[data-animation="to-bottom"] a:hover::before {width: 100%; height: 100%;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li><a href="" data-text="About Us1">About Us1</a></li>
+      <li data-animation="to-left"><a href="" data-text="About Us2">About Us2</a></li>
+      <li data-animation="to-top"><a href="" data-text="About Us3">About Us3</a></li>
+      <li data-animation="to-bottom"><a href="" data-text="About Us4">About Us4</a></li>
+    </ul>
+  </div>
+</body>
+</html>

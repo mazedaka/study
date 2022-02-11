@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>https://scrollrevealjs.org/</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<style>
+	div {width: 300px; border-radius: 15px; margin: 50px auto;}
+	div:nth-child(1) {background: #e31d65; height: 300px;}
+	div:nth-child(2) {background: #ff7c35; height: 600px;}
+	div:nth-child(3) {background: #ffcb36; height: 400px;}
+	div:nth-child(4) {background: #25a954; height: 700px;}
+	div:nth-child(5) {background: #007d97; height: 500px;}
+	div:nth-child(6) {background: #553ab8; height: 800px;}
+
+	div:nth-child(7) {background: #e31d65; height: 300px;}
+	div:nth-child(8) {background: #ff7c35; height: 600px;}
+	div:nth-child(9) {background: #ffcb36; height: 400px;}
+	div:nth-child(10) {background: #25a954; height: 700px;}
+	div:nth-child(11) {background: #007d97; height: 500px;}
+	div:nth-child(12) {background: #553ab8; height: 800px;}
+
+	div:nth-child(13) {background: #e31d65; height: 300px;}
+	div:nth-child(14) {background: #ff7c35; height: 600px;}
+	div:nth-child(15) {background: #ffcb36; height: 400px;}
+	div:nth-child(16) {background: #25a954; height: 700px;}
+	div:nth-child(17) {background: #007d97; height: 500px;}
+	div:nth-child(18) {background: #553ab8; height: 800px;}
+</style>
+</head>
+<body>
+	<section class="wrap">
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+		<div class="sr-top"></div>
+	</section>
+	<!--
+	<p class="sr-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p class="sr-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p class="sr-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p class="sr-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	<p class="sr-rotate">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	-->
+<script>
+	window.sr = ScrollReveal({ reset: true }); // 계속실행 or 한번만실행
+	sr.reveal('.sr-top', { delay: 500, duration: 1000, distance: '50px', origin: 'top' });
+	sr.reveal('.sr-right', { delay: 500, duration: 1000, distance: '50px', origin: 'right' });
+	sr.reveal('.sr-bottom', { delay: 500, duration: 1000, distance: '50px', origin: 'bottom' });
+	sr.reveal('.sr-left', { delay: 500, duration: 1000, distance: '50px', origin: 'left' });
+	sr.reveal('.sr-rotate', { delay: 500, duration: 1000, rotate: { x: 100, y: 100, z: 100 } });
+</script>
+</body>
+</html>
+
+<!--
+delay: 3000,                    // 맨처음 3초후에 실행
+opacity: 0,                     // 불투명도
+duration: 1000,                 // 1초초안에 실행
+scale: 1,                       // 크기
+distance: '100px',              // origin 방향에서 이동 거리
+origin: 'top'                   // 실행방향 (top, right, bottom, left)
+interval: 200                   // 첫 실행후 0.2초후에 두번째 실행
+-->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video-js.min.css">
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.8.1/video.min.js"></script>
+   <title>pc</title>
+   <style>
+      * {margin: 0; padding: 0; outline: none;}
+      .wrap {width: 1920px; margin: 0 auto;}
+   
+      .evt01 {position: relative; background: url('https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/pc/main_key_visual_pc.png'); height: 1120px;}
+      .evt01 .video {position: absolute; width: 1000px; left: 50%; bottom: 20px; margin-left: -500px; overflow: hidden;}
+      .evt01 .video video {width: 100%; display: block;}
+      .evt01 .btn-play01 {position: absolute; width: 100px; height: 100px; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 0; background: url('https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/pc/btn_play.png') no-repeat; background-size: cover;}
+      
+      .evt01 .btn-play02 {position: absolute; width: 100px; height: 100px; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 0; box-shadow: 0 0 0 10px rgba(0,0,0,.2); transition: all .4s;}
+      .evt01 .btn-play02:hover {width: 120px; height: 120px; box-shadow: 0 0 30px 20px rgba(0,0,0,.2);}
+
+      .evt01 .btn-play03 {position: absolute; top: 50%; left: 50%; margin: -50px 0 0 -50px;}
+      .evt01 .btn-play03 .btn {width: 100px; height: 100px; border-radius: 50%; border: 0; background: #fff; box-shadow: 0 0 0 10px rgba(0,0,0,.2); transition: all .4s;}
+      .evt01 .btn-play03:hover .btn {transform: perspective(500px) scale(1.2) rotate(.001deg);}
+      .evt01 .btn-play03 .fas {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 22px;}
+
+      .evt02 {position: relative; width: 1200px; margin: 0 auto;}
+      .evt02 .btn {position: absolute; width: 38px; height: 38px; background: url('https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/pc/btn_preview.png') no-repeat;}
+      .evt02 .btn img {display: none;}
+      .evt02 .btn:hover img {display: block;}
+      .evt02 .btn01 {top: 80px; left: 460px;}
+
+      @media screen and (min-width:0\0){
+         video[poster]{display: block;}
+      }
+   </style>
+</head>
+<body> 
+   <div class="wrap">
+      <section class="evt01">
+         <div class="video">
+            <video id="video" poster="https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/mo/tt_poster.png">
+               <source src="https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/mo/tt_video.mp4" type="video/mp4">
+            </video>
+            <!-- <button class="btn-play01" type="button"></button> -->
+            <!-- <button class="btn-play02" type="button"><i class="fas fa-play fa-2x"></i></button> -->
+            <div class="btn-play03">
+               <button class="btn" type="button"></button>
+               <i class="fas fa-play"></i>
+            </div>
+         </div>
+      </section>
+
+      <section class="evt02">
+         <a href="" class="btn btn01">
+            <img src="https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/pc/preview_1_1.png">
+         </a>
+         <img src="https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/pc/tt_img_1.jpg">
+      </section>
+   </div>
+   <script>
+      $('.btn-play01, .btn-play02, .btn-play03').click(function(){
+         $('.btn-play01, .btn-play02, .btn-play03').hide();
+
+         var video = $('#video');
+         video.get(0).play();
+         video.get(0).controls = true;
+      });
+   </script>
+</body>
+</html>

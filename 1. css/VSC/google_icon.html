@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"> <!-- 색이 채워지지 않는건 |Material+Icons+Outlined 이부분을 넣어야됨 -->
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         font-family: 'Raleway', sans-serif;
+      }
+      :root {
+         --text-color: orangered;  /* 무조건 -- 로 시작한다.*/
+      }
+      .var {
+         color: var(--text-color);
+      }
+   </style>
+</head>
+<body>
+   <div class="var">
+      CSS 변수로 지정하기 (IE 11에서 안먹힘)
+      <span class="material-icons-outlined" style="font-size: 80px;">
+         account_circle
+      </span>
+      <span class="material-icons" style="font-size: 80px;">
+         account_circle
+      </span>
+   </div>
+</body>
+</html>

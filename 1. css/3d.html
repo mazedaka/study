@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>3d.html</title>
+<style>
+	html, body {
+		margin: 0; padding: 0;
+		font-size: 2rem;
+	}
+
+	@keyframes inhak {
+		to {
+			transform: rotateY(360deg); 
+		}
+	}
+
+	.wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		background: powderblue;
+		perspective: 800px;
+	}
+
+	.rolling {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		transform-style: preserve-3d;
+		animation: inhak 5s ease infinite;
+	}
+
+	.rolling:active {
+		animation-play-state: paused;
+	}
+
+	.panel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 200px;
+		height: 200px;
+		background: rgba(255, 255, 255, 0.5);
+		border: 1px solid #000;
+		/*backface-visibility: hidden;*/
+	}
+
+	.panel:nth-child(1) {transform: rotateY(0deg) translateZ(277px);} 
+	.panel:nth-child(2) {transform: rotateY(40deg) translateZ(277px);} 
+	.panel:nth-child(3) {transform: rotateY(80deg) translateZ(277px);} 
+	.panel:nth-child(4) {transform: rotateY(120deg) translateZ(277px);} 
+	.panel:nth-child(5) {transform: rotateY(160deg) translateZ(277px);} 
+	.panel:nth-child(6) {transform: rotateY(200deg) translateZ(277px);}
+	.panel:nth-child(7) {transform: rotateY(240deg) translateZ(277px);}
+	.panel:nth-child(8) {transform: rotateY(280deg) translateZ(277px);}
+	.panel:nth-child(9) {transform: rotateY(320deg) translateZ(277px);}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="rolling">
+			<div class="panel">1</div>
+			<div class="panel">2</div>
+			<div class="panel">3</div>
+			<div class="panel">4</div>
+			<div class="panel">5</div>
+			<div class="panel">6</div>
+			<div class="panel">7</div>
+			<div class="panel">8</div>
+			<div class="panel">9</div>
+		</div>
+	</div>
+</body>
+</html>

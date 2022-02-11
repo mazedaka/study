@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>media_query.html</title>
+<style>
+	.container {min-width: 320px; max-width: 1280px; background: black; margin: 0 auto; padding: 10px 0;}
+	.mobile,
+	.tablet,
+	.desktop {display: none; color: #fff;}
+	.container>code {white-space: pre; font: bold 20px monaco, monospace;}
+
+	/* Mobile */
+	@media (max-width:767px){
+		.mobile{
+			display:block;
+			background:red;
+		}
+	}
+
+	/* Tablet */
+	@media (min-width:768px) and (max-width:1024px){
+		.tablet{
+			display:block;
+			background:green;
+		}
+	}
+
+	/* Desktop */
+	@media (min-width:1025px){
+		.desktop{
+			display:block;
+			background:blue;
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="mobile">모바일?</h1>
+		<code class="mobile">
+		@media (max-width:767px){
+			/* 767px 이하 해상도에서 해석하는 코드 */
+			.mobile{
+			display:block;
+			background:red;
+			}
+		}
+		</code>
+
+		<h1 class="tablet">테블릿?</h1>
+		<code class="tablet">
+		@media (min-width:768px) and (max-width:1024px){
+			/* 768~1024px 해상도에서 해석하는 코드 */
+			.tablet{
+			display:block;
+			background:green;
+			}
+		}
+		</code>
+
+		<h1 class="desktop">데스크톱?</h1>
+		<code class="desktop">
+		@media (min-width:1025px){
+			/* 1025px 이상 해상도에서 해석하는 코드 */
+			.desktop{
+			display:block;
+			background:blue;
+			}
+		}
+		</code>
+	</div>
+</body>
+</html>

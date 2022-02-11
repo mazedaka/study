@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버밴드 로그인</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap">
+  <link rel="icon" href="./img/favicon.png">
+
+  <style>
+    body { margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; background: #eee; font-weight: 300;}
+    a {text-decoration: none; color: #222;}
+    header {border-bottom: 1px solid lightgray; background: #fff; height: 60px; text-align: center; padding-top: 15px; box-sizing: border-box;}
+    header a {}
+    section {height: calc(100vh - 60px); position: relative;}
+    .login {width: 360px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+    .login_type h1 {margin: 0  0 30px; font-size: 36px; text-align: center; font-weight: normal;}
+    .login_type .btn {border: 1px solid lightgray; display: block; text-align: center; padding: 15px 0; border-radius: 3px; margin-bottom: 10px; color: #fff; position: relative; opacity: 0.8;}
+    .login_type .btn:hover {opacity: 1;}
+    .login_type .btn::before {content: ''; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background-image: url('./img/spr_img.png');}
+    .login_type .btn:nth-of-type(1) {color: #222; background: #fff;}
+    .login_type .btn:nth-of-type(1)::before {background-position: -223px -110px; width: 16px; height: 26px; left: 24px;}
+    .login_type .btn:nth-of-type(2) {background: #8a8c9b;}
+    .login_type .btn:nth-of-type(2)::before {background-position: -169px -93px; width: 24px; height: 17px;}
+    .login_type .btn:nth-of-type(3) {background: #03c75a;}
+    .login_type .btn:nth-of-type(3)::before {background-position: -219px -75px; width: 24px; height: 24px;}
+    .login_type .btn:nth-of-type(4) {background: #0075ff;}
+    .login_type .btn:nth-of-type(4)::before {background-position: -169px -126px; width: 24px; height: 24px;}
+    .login_type .btn:nth-of-type(5) {background: #222222;}
+    .login_type .btn:nth-of-type(5)::before {background-position: -172px -51px; width: 19px; height: 23px; left: 23px;}
+    .login_type .or_text {display: block; text-align: center; margin-bottom: 14px; position: relative; font-size: 13px;}
+    .login_type .or_text::before, .login_type .or_text::after {content: ''; position: absolute; top: 11px; background: lightgray; width: 44%; height: 1px;}
+    .login_type .or_text::before {left: 0;}
+    .login_type .or_text::after {right: 0;}
+    .login_footer label {font-size: 15px;}
+    .login_footer p {text-align: center; margin: 35px 0 0;}
+    .login_footer p a {font-weight: 500; margin-left: 5px;}
+    .login_footer p a:hover {text-decoration: underline;}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a href="#none">
+        <img src="./img/band_80.png" alt="">
+      </a>
+    </header>
+    <section>
+      <div class="login">
+        <div class="login_type">
+          <h1>로그인</h1>
+          <a class="btn btn1" href="#none">휴대폰 번호로 로그인</a>
+          <span class="or_text">또는</span>
+          <a class="btn" href="#none">이메일로 로그인</a>
+          <a class="btn" href="#none">네이버로 로그인</a>
+          <a class="btn" href="#none">페이스북으로 로그인</a>
+          <a class="btn" href="#none">애플로 로그인</a>
+        </div>
+        <div class="login_footer">
+          <label for="chk">
+            <input type="checkbox" id="chk"> 로그인 상태 유지
+          </label>
+          <p>
+            밴드가 처음이신가요?
+            <a href="#none">회원가입</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>test</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<style>
+		* {margin: 0; padding: 0; outline: none;}
+		.event_wrap .link {position: absolute;}
+		.event_wrap .count {position: absolute; width: 12%; height: 3%; left: 41.0%; top: 91.6%; text-align: center;}
+		.event_wrap .num {color: #000; font-size: 20px; line-height: normal; display: block; height: 100%; background: #fff100;}
+	</style>
+</head>
+
+<body>
+	<div class="event_wrap">
+		<section>
+			<button class="link">button</button>
+			<div class="count">
+				<span class="num">0</span>
+			</div>
+		</section>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		$('.link').click(function() {
+			$('.num').html(function(i, val) { return val*1+1 });
+			alert("투표 완료되었습니다. 참여 감사합니다!");
+		});
+	</script>
+</body>
+</html>

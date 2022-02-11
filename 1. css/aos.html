@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>https://michalsnik.github.io/aos/</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+	div {width: 300px; border-radius: 15px; margin: 50px auto;}
+	div:nth-child(1) {background: #e31d65; height: 300px;}
+	div:nth-child(2) {background: #ff7c35; height: 600px;}
+	div:nth-child(3) {background: #ffcb36; height: 400px;}
+	div:nth-child(4) {background: #25a954; height: 700px;}
+	div:nth-child(5) {background: #007d97; height: 500px;}
+	div:nth-child(6) {background: #553ab8; height: 800px;}
+
+	div:nth-child(7) {background: #e31d65; height: 300px;}
+	div:nth-child(8) {background: #ff7c35; height: 600px;}
+	div:nth-child(9) {background: #ffcb36; height: 400px;}
+	div:nth-child(10) {background: #25a954; height: 700px;}
+	div:nth-child(11) {background: #007d97; height: 500px;}
+	div:nth-child(12) {background: #553ab8; height: 800px;}
+
+	div:nth-child(13) {background: #e31d65; height: 300px;}
+	div:nth-child(14) {background: #ff7c35; height: 600px;}
+	div:nth-child(15) {background: #ffcb36; height: 400px;}
+	div:nth-child(16) {background: #25a954; height: 700px;}
+	div:nth-child(17) {background: #007d97; height: 500px;}
+	div:nth-child(18) {background: #553ab8; height: 800px;}
+</style>
+</head>
+<body>
+	<section class="wrap">
+		<div class="sr-top" data-aos="fade-up" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-down" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-right" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-left" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-up-left"" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-down-right" data-aos-duration="1500"></div>
+
+		<div class="sr-top" data-aos="fade-up" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-down" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-right" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-left" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-up-left"" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-down-right" data-aos-duration="1500"></div>
+
+		<div class="sr-top" data-aos="fade-up" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-down" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-right" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-left" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-up-left"" data-aos-duration="1500"></div>
+		<div class="sr-top" data-aos="fade-down-right" data-aos-duration="1500"></div>
+	</section>
+<script>
+  /* AOS.init(); */
+
+  AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+});
+</script>
+
+<!-- <script>
+  AOS.init({
+	once: true,
+  });
+</script> -->
+</body>
+</html>

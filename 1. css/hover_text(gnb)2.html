@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap">
+  <style>
+    * {font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+    ul, li {list-style: none;}
+    a {text-decoration: none; color: inherit;}
+
+    .dep1 {font-size: 0; height: 400px;}
+    .dep1 > li {display: inline-block; width: 100px; background: #ddd; font-size: 14px; text-align: center; vertical-align: top;}
+    .dep1 > li > a {display: block; padding: 10px 0;}
+    .dep1 > li:hover .dep2 {display: block;}
+    .dep2 {display: none;}
+    .dep2 li {background: #999;}
+    .dep2 li a {display: block; padding: 10px 0; color: #fff;}
+    .dep2 li a:hover {background: #333;}
+  </style>
+</head>
+<body>
+  <div class="gnb1">
+    <p>vertical-align으로 정렬</p>
+    <ul class="dep1">
+      <li>
+        <a href="#">MENU-1</a>
+        <ul class="dep2">
+          <li><a href="#">sub-1</a></li>
+          <li><a href="#">sub-2</a></li>
+          <li><a href="#">sub-3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">MENU-2</a>
+        <ul class="dep2">
+          <li><a href="#">sub-1</a></li>
+          <li><a href="#">sub-2</a></li>
+          <li><a href="#">sub-3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">MENU-3</a>
+        <ul class="dep2">
+          <li><a href="#">sub-1</a></li>
+          <li><a href="#">sub-2</a></li>
+          <li><a href="#">sub-3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

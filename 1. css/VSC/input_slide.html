@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+      .slider-inner a {display: inline-block; width: 300px; height: 300px;}
+      .slider-inner a:nth-child(1) {background: crimson;}
+      .slider-inner a:nth-child(2) {background: dodgerblue;}
+      .slider-inner a:nth-child(3) {background: yellowgreen;}
+
+      .tab-inner {width: 300px; height: 350px; border: 1px solid red;}
+      input[name=tabname] {display: none;}
+      .slider {position: relative; height: 300px; overflow: hidden;}
+      .slider-inner {width: 900px; font-size: 0; position: absolute; top: 0; left: 0; transition: 0.3s;}
+      .btn {text-align: center; margin-top: 10px;}
+      .btn label {width: 20px; height: 20px; border-radius: 50%; background: lightgray; display: inline-block; cursor: pointer;}
+
+      input[id=tab1]:checked ~ .slider .slider-inner {left: 0}
+      input[id=tab2]:checked ~ .slider .slider-inner {left: -300px;}
+      input[id=tab3]:checked ~ .slider .slider-inner {left: -600px;}
+
+      input[id=tab1]:checked ~ .btn label[for=tab1],
+      input[id=tab2]:checked ~ .btn label[for=tab2],
+      input[id=tab3]:checked ~ .btn label[for=tab3] {background: crimson;}
+   </style>
+</head>
+<body>
+   <div class="tab-inner">
+      <input type="radio" name="tabname" id="tab1" checked>
+      <input type="radio" name="tabname" id="tab2">
+      <input type="radio" name="tabname" id="tab3">
+
+      <div class="slider">
+         <div class="slider-inner">
+            <a href="#none1"></a>
+            <a href="#none2"></a>
+            <a href="#none3"></a>
+         </div>
+      </div>
+
+      <div class="btn">
+         <label for="tab1"></label>
+         <label for="tab2"></label>
+         <label for="tab3"></label>
+      </div>
+   </div>
+</body>
+</html>

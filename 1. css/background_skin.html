@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>background_skin.html</title>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+    .bg {
+		background: url('http://mazedaka.dothome.co.kr/portfolio/img/header.jpg');
+		height: 100vh;
+		background-size: cover;
+		position: relative;
+	}
+
+    .skin {
+        position: absolute;
+        top: 0px;
+        right: 50%;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(46, 39, 36, 0.85);
+    }
+
+    .skin::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100%;
+        border-bottom: 648.5px solid transparent;
+        border-top: 648.5px solid transparent;
+        border-left: 210px solid rgba(46, 39, 36, 0.85);
+    }
+</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="skin"></div>
+	</div>
+</body>
+</html>

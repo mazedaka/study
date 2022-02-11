@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  em { color:blue; font-weight;bold; }
+  div { color:red; }
+</style>
+  <script src="http://code.jquery.com/jquery-1.5.js"></script>
+</head>
+<body>
+  
+  <em title="huge, gigantic"></em>
+  The title of the emphasis is:<div></div>
+
+<script>
+var title = $("em").attr("title");
+  $("div").text(title);
+</script>
+
+</body>
+</html>

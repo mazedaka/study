@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {}
+    input[type="checkbox"] {
+      display: none;
+    }
+    label[for="hamburger"] {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      display: block;
+      cursor: pointer;
+    }
+    label[for="hamburger"] span {
+      position: absolute;
+      height: 2px;
+      background: #000;
+      width: 100%;
+      transition: 0.3s;
+    }
+    label[for="hamburger"] span:nth-child(1) {
+      top: 0;
+    }
+    label[for="hamburger"] span:nth-child(2) {
+      top: 50%;
+    }
+    label[for="hamburger"] span:nth-child(3) {
+      top: 100%;
+    }
+    input[type="checkbox"]:checked + label[for="hamburger"] span:nth-child(1) {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+    input[type="checkbox"]:checked + label[for="hamburger"] span:nth-child(2) {
+      opacity: 0;
+    }
+    input[type="checkbox"]:checked + label[for="hamburger"] span:nth-child(3) {
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="hamburger">
+    <label for="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+</body>
+</html>

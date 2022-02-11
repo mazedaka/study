@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+</head>
+<body>
+
+  <!-- -->
+  <style>
+    .box {height: 300px; background: dimgray;}
+    .hak {height: 500px; background: deeppink;}
+    .hak.color {background: #000;}
+  </style>
+  <section class="box hak">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+  <section class="box">box</section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+			$(window).scroll(function(){
+        console.log($(window).scrollTop());  /* 콘솔에서 스크롤탑 값을 구하는법 */
+
+				if($(this).scrollTop() > 414){
+					$('.hak').addClass('color')
+				}else{
+					$('.hak').removeClass('color')
+				}
+			});
+    });
+  </script>
+</body>
+</html>

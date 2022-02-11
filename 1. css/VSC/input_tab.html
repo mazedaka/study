@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    body {display: flex; justify-content: center; align-items: center; height: 100vh;}
+
+    .slide1 {width: 200px; height: 200px; background: olivedrab;}
+    .slide2 {width: 200px; height: 200px; background: orange;}
+    .slide3 {width: 200px; height: 200px; background: orangered;}
+
+    .tab-inner {border: 1px solid red; width: 200px; height: 250px; position: relative;}
+    input[name=tabmenu] {display: none;}
+    .content {display: none;}
+    .btn {position: absolute; text-align: center; width: 100%; bottom: 15px;}
+    .btn label {width: 15px; height: 15px; background: lightslategray; display: inline-block; border-radius: 50%; cursor: pointer;}
+
+    input[id=tab1]:checked ~ .slide1 {display: block;}
+    input[id=tab2]:checked ~ .slide2 {display: block;}
+    input[id=tab3]:checked ~ .slide3 {display: block;}
+
+    input[id=tab1]:checked ~ .btn label[for=tab1] {background: coral;}
+    input[id=tab2]:checked ~ .btn label[for=tab2] {background: coral;}
+    input[id=tab3]:checked ~ .btn label[for=tab3] {background: coral;}
+  </style>
+</head>
+<body>
+  <div class="tab-inner">
+    <input type="radio" name="tabmenu" id="tab1" checked>
+    <input type="radio" name="tabmenu" id="tab2">
+    <input type="radio" name="tabmenu" id="tab3">
+
+    <div class="content slide1"></div>
+    <div class="content slide2"></div>
+    <div class="content slide3"></div>
+
+    <div class="btn">
+      <label for="tab1"></label>
+      <label for="tab2"></label>
+      <label for="tab3"></label>
+    </div>
+  </div>
+</body>
+</html>

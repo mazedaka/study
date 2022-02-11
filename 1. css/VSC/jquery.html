@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .wrap {}
+    .wrap button {width: 88px; height: 35px; background: orangered; color: #fff; border: 0; cursor: pointer; outline: none;}
+    .wrap div {width: 369px; height: 246px; background: peru; margin-top: 5px; color: #fff; line-height: 246px; text-align: center; transition: all 0.3s;}
+    .wrap div.add {background: crimson; width: 100px;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <button>보이기</button>
+  <button>감추기</button>
+  <button>토글</button>
+  <button>클래스+</button>
+  <div>box</div>
+</div>
+
+<script>
+  $(function(){
+    $('button:nth-child(1)').click(function(){
+      $('.wrap div').fadeIn();
+    });
+    $('button:nth-child(2)').click(function(){
+      $('.wrap div').fadeOut();
+    });
+    $('button:nth-child(3)').click(function(){
+      $('.wrap div').fadeToggle();
+    });
+    $('button:nth-child(4)').click(function(){
+      $('.wrap div').toggleClass('add');
+    });
+  });
+</script>
+</body>
+</html>

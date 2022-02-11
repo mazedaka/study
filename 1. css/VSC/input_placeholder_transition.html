@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {display: flex; justify-content: center; align-items: center; height: 100vh; background: darkolivegreen;}
+    .wrap {margin-top: 30px;}
+    .heading input[type=text] {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      background: #fff url('img/search.png') no-repeat center left 10px;
+      background-size: 17px;
+      padding-left: 40px;
+    }
+    .heading input[type=text]::placeholder {
+      font-style: italic;
+      transition: 0.3s;
+    }
+    .heading input[type=text]:focus::placeholder {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <section class="wrap">
+    <div class="heading">
+      <h1>코딩웍스, 프로트엔드 퍼블리셔 취업을 위한 실전 퍼블리싱 강좌</h1>
+      <input type="text" placeholder="What are you looking for?">
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    * {margin: 0; padding: 0;}
+    body {display: flex; justify-content: center; align-items: center; height: 100vh; background: #eee;}
+
+    .section {
+      width: 800px;
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.055);
+    }
+    .section h1 {
+      font-size: 25px;
+      margin: 10px 0;
+    }
+    .section h1 span {
+      color: crimson;
+    }
+
+    .pic {}
+    .pic img {
+      width: 100px;
+      filter: grayscale(1);
+      margin: 20px 5px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .pic img.active {
+      border-radius: 50%;
+      filter: grayscale(0);
+    }
+
+    .text {}
+    .text .content {
+      display: none;
+    }
+    .text .content.active {
+      display: block;
+    }
+    .text .content p:nth-child(2) {
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      color: crimson;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section">
+    <h1><span>Lorem</span> ipsum dolor sit amet.</h1>
+    <div class="pic">
+      <img src="./img/profile01.jpeg" class="active" data-alt="tab1">
+      <img src="./img/profile02.jpeg" data-alt="tab2">
+      <img src="./img/profile03.jpeg" data-alt="tab3">
+    </div>
+    <div class="text">
+      <div class="content active" id="tab1">
+        <p>
+          11111 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quas laudantium dicta velit quam, obcaecati quibusdam officiis sit voluptates dolores libero neque facilis suscipit porro tenetur vel, esse omnis iure ipsam consequatur vitae id rem illum. Doloremque ea ipsum nemo.
+        </p>
+        <p>첫번째</p>
+      </div>
+      <div class="content" id="tab2">
+        <p>
+          22222 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quas laudantium dicta velit quam, obcaecati quibusdam officiis sit voluptates dolores libero neque facilis suscipit porro tenetur vel, esse omnis iure ipsam consequatur vitae id rem illum. Doloremque ea ipsum nemo.
+        </p>
+        <p>두번째</p>
+      </div>
+      <div class="content" id="tab3">
+        <p>
+          33333 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quas laudantium dicta velit quam, obcaecati quibusdam officiis sit voluptates dolores libero neque facilis suscipit porro tenetur vel, esse omnis iure ipsam consequatur vitae id rem illum. Doloremque ea ipsum nemo.
+        </p>
+        <p>세번째</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('.pic img').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+
+      $('.text .content').removeClass('active')
+      $('#' + $(this).attr('data-alt')).addClass('active')
+
+      // tab1  ==  $(this).attr('data-alt')
+    })
+  </script>
+</body>
+</html>

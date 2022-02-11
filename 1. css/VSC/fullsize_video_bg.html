@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap">
+  <style>
+    body {font-family: 'Montserrat', sans-serif; color: #222; margin: 0; padding: 0;}
+    a {text-decoration: none; color: #222;}
+    .video_frame::before {content: ''; position: absolute; width: 100%; height: 100%; background: linear-gradient(135deg, red, blue); opacity: 0.2;}
+    .video_frame video {position: fixed; min-width: 100%; min-height: 100%; z-index: -1;}
+    .logo {position: absolute; top: 50px; left: 100px;}
+    .logo img {width: 200px;}
+    .heading {position: absolute; width: 700px; left: 100px; bottom: 100px; font-size: 10px; color: #fff; animation: show1 2s 1s ease; animation-fill-mode: both;}
+    .heading h1 {font-size: 30px; margin: 0;}
+    .heading h1 span {display: block; color: crimson;}
+    .heading p {font-size: 16px; line-height: 1.5;}
+    .btn_1, .btn_2 {background: #fff; color: #222; text-transform: uppercase; display: inline-block; width: 100px; text-align: center; padding: 7px; border-radius: 20px; margin-right: 5px; transition: 0.3s; border: 1px solid #fff}
+    .heading .btn_1 {}
+    .heading .btn_1:hover {background: #222; color: #fff; border-color: #222;}
+    .heading .btn_2 {background: transparent; #fff; color: #fff;}
+    .heading .btn_2:hover {background: #fff; color: #222;}
+    .anniversary {position: absolute; right: 100px; bottom: 63px; text-align: center; animation: show2 2s 1s ease; animation-fill-mode: both;}
+    .anniversary em {display: block; font-style: normal; letter-spacing: 5px; margin-bottom: -20px;}
+    .anniversary span {font-family: 'Monoton', cursive; font-size: 100px;}
+    .trigger {width: 50px; height: 30px; position: absolute; top: 50px; right: 100px; cursor: pointer;}
+    .trigger span {position: absolute; width: 100%; height: 1px; background: #fff; transition: 0.3s;}
+    .trigger span:nth-child(1) {top: 0;}
+    .trigger span:nth-child(2) {top: 50%; width: 80%;}
+    .trigger span:nth-child(3) {top: 100%;}
+    .trigger.active span {background: #fff; z-index: 1;}
+    .trigger.active span:nth-child(1) {transform: rotate(45deg); top: 50%;}
+    .trigger.active span:nth-child(2) {opacity: 0;}
+    .trigger.active span:nth-child(3) {transform: rotate(-45deg); top: 50%;}
+    .modal {position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: none;}
+    .modal .gnb {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+    .modal .gnb a {color: #fff; font-size: 60px; display: block; padding: 10px 0; transition: 0.3s; animation: fadeIn 0.5s ease; animation-fill-mode: both; opacity: 0;}
+    .modal .gnb a:hover {color: crimson;}
+    .modal .gnb a:nth-child(1) {animation-delay: 0.5s;}
+    .modal .gnb a:nth-child(2) {animation-delay: 0.6s;}
+    .modal .gnb a:nth-child(3) {animation-delay: 0.7s;}
+    .modal .gnb a:nth-child(4) {animation-delay: 0.8s;}
+    .modal .gnb a:nth-child(5) {animation-delay: 0.9s;}
+
+    @keyframes show1 {
+      0% {opacity: 0; margin-left: -100px;}
+      100% {opacity: 1; margin-left: 0;}
+    }
+    @keyframes show2 {
+      0% {opacity: 0; margin-right: -100px;}
+      100% {opacity: 1; margin-right: 0;}
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateX(-50px);}
+      100% {opacity: 1; transform: translateX(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="video_frame">
+      <video src="https://mazedaka.co.kr/css/VSC/img/video.mp4" autoplay muted loop poster=""></video>
+    </div>
+    <div class="logo">
+      <img src="https://mazedaka.co.kr/css/VSC/img/logo.png">
+    </div>
+    <div class="heading">
+      <h1>
+        <span>Champion</span> The World Best Brand
+      </h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias rerum temporibus cum sapiente perferendis repudiandae vero consectetur officia ad corrupti, voluptas eaque minima saepe repellendus voluptatem in. Distinctio, totam provident.
+      </p>
+      <a class="btn_1" href="">lookbook</a>
+      <a class="btn_2" href="">product view</a>
+    </div>
+    <div class="anniversary">
+      <em>Anniversary</em><span>60</span>
+    </div>
+    <div class="trigger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="modal">
+      <div class="gnb">
+        <a href="#none">menu1</a>
+        <a href="#none">menu2</a>
+        <a href="#none">menu3</a>
+        <a href="#none">menu4</a>
+        <a href="#none">menu5</a>
+      </div>
+    </div>
+    <audio id="champion_bgm" src="https://mazedaka.co.kr/css/VSC/img/guiter.mp3" autoplay loop controls></audio>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    // trigger
+    $('.trigger').click(function(){
+      $(this).toggleClass('active')
+      $('.modal').fadeToggle()
+    });
+
+    // audio volume
+    var bgm = document.getElementById('champion_bgm')
+    bgm.volume = 0.1
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>drawer_side_menu</title>
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/main.css">
+
+<script src="./js/vendor/jquery-1.10.2.min.js"></script>
+<script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<header class="page-header" role="banner">
+    <h1>drawer_side_menu</h1>
+</header>
+
+<div class="page-main" role="main">
+    <aside>
+        <ul>
+            <li><a href="#"><img src="img/01_aside.png"></a></li>
+            <li><a href="#"><img src="img/02_aside.png"></a></li>
+            <li><a href="#"><img src="img/03_aside.png"></a></li>
+        </ul>
+        <button><img src="img/btn_open.png"></button>
+    </aside>
+</div>
+
+<script>
+$(function(){
+    var $aside = $('aside'),
+        $button = $aside.find('button'),
+        $duration = 500;
+
+    $button.click(function(){
+        $aside.toggleClass('open');
+
+        if($aside.hasClass('open')){
+            // $aside.stop().animate({left: '-70px'}, $duration, 'easeOutBack');
+            $button.find('img').attr('src','img/btn_close.png');
+        }else{
+            // $aside.stop().animate({left: '-350px'}, $duration, 'easeInBack');
+            $button.find('img').attr('src','img/btn_open.png');
+        }
+    });
+
+    // console.log($button.find('img').attr('src'));
+});
+</script>
+</body>
+</html>
+
+
+<!-- https://www.youtube.com/watch?v=dPt643ZYdjU&list=PL-qMANrofLyu4HcK14ntl-o7d-eHxo7-U&index=7 -->

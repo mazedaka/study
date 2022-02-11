@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {margin: 0; padding: 0;}
+    .grid {margin: 0 auto; padding-top: 20px;}
+    .grid-item {width: 350px; margin-bottom: 16px; border-radius: 20px; overflow: hidden;}
+    .grid-item img {width: inherit;}
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="grid-item"><img src="https://source.unsplash.com/user/venrick/400x400"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/jimmydean/400x300"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/hans_isaacson/400x600"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/patrickperkins/400x400"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/jimmydean/400x600"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/kate_gliz/400x400"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/asaldatava/400x500"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/inincurtain/400x650"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/ninaxelliott/400x400"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/finnysz/400x600"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/bmcornelius/400x400"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/tobyelliott/400x500"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/andreaedavis/400x500"></div>
+    <div class="grid-item"><img src="https://source.unsplash.com/user/ehsan1408/400x400"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  <!-- imagesloaded 로딩 (모든 이미지가 로딩된 후 실행) -->
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  
+  <script>
+    var $imgs = $('.grid').imagesLoaded(function() {
+      $imgs.masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 0,
+        gutter : 20,
+        fitWidth: true // 가운데 정렬, margin:0 auto;
+      });
+    });
+  </script>
+</body>
+</html>

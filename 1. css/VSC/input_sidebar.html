@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {margin: 0; padding: 0;}
+    input[id=chk] {display: none;}
+    label[for=chk] {width: 30px; height: 20px; display: block; position: absolute; top: 20px; left: 20px; cursor: pointer; z-index: 99; transition: 0.3s;}
+    label[for=chk] span {position: absolute; width: 100%; background: #000; height: 2px; transition: 0.3s;}
+    label[for=chk] span:nth-child(1) {top: 0;}
+    label[for=chk] span:nth-child(2) {top: 50%;}
+    label[for=chk] span:nth-child(3) {top: 100%;}
+    input[id=chk]:checked + label span:nth-child(1) {transform: rotate(45deg); top: 50%;}
+    input[id=chk]:checked + label span:nth-child(2) {opacity: 0;}
+    input[id=chk]:checked + label span:nth-child(3) {transform: rotate(-45deg); top: 50%;}
+    .sidebox {width: 250px; height: 100vh; background: darkslateblue; position: absolute; top: 0; left: -250px; transition: 0.3s;}
+    input[id=chk]:checked ~ .sidebox {left: 0;}
+    input[id=chk]:checked ~ label {left: 265px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="chk">
+    <label for="chk">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="sidebox"></div>
+  </div>
+</body>
+</html>

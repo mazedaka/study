@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>syoff_banner2.html</title>
+<style>
+    .wrap {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrap ul {
+        font-size: 0;
+    }
+    .wrap ul li {
+        display: inline-block;
+        vertical-align: top;
+        width: 33.3%;
+    }
+    .wrap ul li .box {
+        position: relative;
+        overflow: hidden;
+        margin: 5px;
+    }
+    .wrap ul li .box img {
+        width: 100%;
+    }
+    .wrap ul li .box .top {  
+        position: absolute; 
+        bottom: 150%;
+        left: 30px;
+        z-index: 2;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    .wrap ul li:hover .top {
+        bottom: 52%;
+    }
+    .wrap ul li .box .bottom {
+        position: absolute; 
+        top: 150%;
+        left: 30px;
+        z-index: 2;
+        color: #fff;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    .wrap ul li:hover .bottom {
+        top: 52%;
+    }
+    .wrap ul li h3 {
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+        color: #666;
+    }
+    .wrap ul li .box::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .wrap ul li:hover .box::after {
+        opacity: 1;
+		margin: 15px;
+    }
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href="">
+                    <div class="box">
+                        <div class="top">상단 텍스트</div>
+                        <div class="bottom">하단 텍스트</div>
+                        <img src="http://mazedaka.dothome.co.kr/design/img/img4.jpg">
+                    </div>
+                    <h3>브라켓으로 코남 따라잡기</h3>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="box">
+                        <div class="top">상단 텍스트</div>
+                        <div class="bottom">하단 텍스트</div>
+                        <img src="http://mazedaka.dothome.co.kr/design/img/img5.jpg">
+                    </div>
+                    <h3>브라켓으로 코남 따라잡기</h3>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="box">
+                        <div class="top">상단 텍스트</div>
+                        <div class="bottom">하단 텍스트</div>
+                        <img src="http://mazedaka.dothome.co.kr/design/img/img6.jpg">
+                    </div>
+                    <h3>브라켓으로 코남 따라잡기</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

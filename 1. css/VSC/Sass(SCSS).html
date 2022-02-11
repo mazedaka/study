@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* CSS */
+    .list {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid blue;
+    }
+    .list li {
+      color: red;
+      width: 100px;
+      height: 100px;
+      background: red;
+      list-style: none;
+      float: left;
+    }
+    .list li:last-child {
+      background: darkolivegreen;
+    }
+
+    /* SCSS */
+    /* https://www.sassmeister.com 컴파일 해야됨 */
+    /* .list {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid blue;
+
+      li {
+        color: red;
+        width: 100px;
+        height: 100px;
+        background: red;
+        list-style: none;
+        float: left;
+
+        &:last-child {
+          background: darkolivegreen;
+        }
+      }
+    } */
+  </style>
+</head>
+<body>
+  <ul class="list">
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>

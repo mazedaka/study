@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>ball_animation.html</title>
+<style>
+	body {
+		margin: 0;
+	}
+
+	@keyframes bounce {
+		60%, 80%, to {
+			transform: translateY(350px);
+			animation-timing-function: cubic-bezier(0.15, 0.29, 0.29, 0.75)
+		}
+		70% {
+			transform: translateY(250px);
+		}
+		90% {
+			transform: translateY(300px);
+		}
+	}
+
+	.ball {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -30px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: orangered;
+		animation: bounce 1s cubic-bezier(0.29, 0.15, 0.75, 0.29) forwards;
+	}
+
+	.floor {
+		position: absolute;
+		top: 410px;
+		width: 100vw;
+		height: 5px;
+		background: #000;
+	}    
+</style>
+</head>
+<body>
+    <div class="ball"></div>
+    <div class="floor"></div>
+</body>
+</html>

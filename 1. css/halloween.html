@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>halloween.html</title>
+<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+<style>
+    body {
+        background-color: #040417;
+    }
+
+    .head {
+        margin: 250px auto 100px;
+        width: 240px;
+        height: 200px;
+        background-color: orangered;
+        border-radius: 60px;
+        border-left: 22px solid rgba(255,255,255,0.3);
+        border-right: 22px solid rgba(255,255,255,0.3);
+        position: relative;
+        animation-name: head; /*애니메이션 이름*/
+        animation-duration: 1s; /*애니메이션 실행 시간*/
+        animation-iteration-count: infinite; /*애니메이션 실행 횟수*/
+        animation-direction: alternate;
+    }
+
+    .head-inner {
+        background-color: orangered;
+        border-radius: 50px;
+        border-left: 22px solid rgba(255,255,255,0.3);
+        border-right: 22px solid rgba(255,255,255,0.3);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: -20px 30px;
+    }
+
+    .head-inner:before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 50px;
+        background-color: #498d34;
+        border-left: 8px solid rgba(0,0,0,0.4);
+        border-right: 8px solid rgba(0,0,0,0.4);
+        border-bottom: 14px solid rgba(0,0,0,0.8);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        margin: -50px auto 0;
+    }
+
+    .left-eye-wrap {
+        width: 95px;
+        height: 95px;
+        border-radius: 100%;
+        background-color: rgba(0,0,0,0.1);
+        box-shadow: 0 0 50px 10px rgba(254,253,85,0.4);
+        position: absolute;
+        left: -40px;
+        top: 5px;
+    }
+
+    .right-eye-wrap {
+        width: 95px;
+        height: 95px;
+        border-radius: 100%;
+        background-color: rgba(0,0,0,0.1);
+        box-shadow: 0 0 50px 10px rgba(254,253,85,0.4);
+        position: absolute;
+        right: -40px;
+        top: 5px;
+    }
+
+    .eye {
+        width: 0;
+        height: 0;
+        border-width: 47.3px;
+        border-style: solid;
+        border-color: transparent transparent #fefd56 transparent;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        animation-name: eye; /*애니메이션 이름*/
+        animation-duration: 1s; /*애니메이션 실행 시간*/
+        animation-iteration-count: infinite; /*애니메이션 실행 횟수*/
+        animation-direction: alternate-reverse; /*애니메이션 실행 방향*/
+    }
+
+    .mouth {
+        width: 100%;
+        height: 55px;
+        background-color: #fefd56;
+        margin: 120px auto;
+        box-shadow: inset 0 0 20px 5px #e77505;
+        border-top: 8px dashed orangered;
+        border-bottom: 6px dashed orangered;
+        animation-name: mouth; /*애니메이션 이름*/
+        animation-duration: 1s; /*애니메이션 실행 시간*/
+        animation-iteration-count: infinite; /*애니메이션 실행 횟수*/
+        animation-direction: alternate-reverse; /*애니메이션 실행 방향*/
+    }
+
+    .left-arm {
+        width: 50px;
+        height: 200px;
+        background-color: #000;
+        position: absolute;
+        left: -80px;
+        top: 0;
+        border-left: 10px solid #1f1e20;
+        border-bottom-left-radius: 60px;
+    }
+
+    .right-arm {
+        width: 50px;
+        height: 200px;
+        background-color: #000;
+        position: absolute;
+        right: -80px;
+        top: 0;
+        border-right: 10px solid #1f1e20;
+        border-bottom-right-radius: 60px;
+    }
+
+    @keyframes head {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
+
+    @keyframes eye {
+        0% {
+            border-color: transparent transparent #fefd56 transparent;
+        }
+        100% {
+            border-color: transparent transparent #000 transparent;
+        }
+    }
+
+    @keyframes mouth {
+        0% {
+            background-color: #fefd56;
+        }
+        0% {
+            height: 8px;
+        }
+        100% {
+            background-color: #000;
+            box-shadow: none;
+        } 
+    }
+
+    .text {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Bungee', cursive;
+        letter-spacing: 10px;
+        animation-name: text; /*애니메이션 이름*/
+        animation-duration: 1s; /*애니메이션 실행 시간*/
+        animation-iteration-count: infinite; /*애니메이션 실행 횟수*/
+        animation-direction: alternate; /*애니메이션 실행 방향*/
+    }
+
+    .text h1 {
+        color: orangered;
+        font-size: 90px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text h2 {
+        color: orange;
+        font-size: 60px;
+        margin: 0;
+        padding: 0;
+        text-shadow: 0 5px #964527;
+    }
+
+    @keyframes text {
+        0% {
+            letter-spacing: 10px;
+        }
+        100% {
+            letter-spacing: 30px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="head">
+        <div class="head-inner">
+            <div class="left-eye-wrap">
+                <div class="eye"></div>
+            </div>
+            <div class="right-eye-wrap">
+                <div class="eye"></div>
+            </div>
+        <div class="mouth"></div></div>
+        <div class="left-arm"></div>
+        <div class="right-arm"></div>
+    </div>
+    <div class="text">
+        <h1>happy</h1>
+        <h2>halloween</h2>
+    </div>
+</body>
+</html>

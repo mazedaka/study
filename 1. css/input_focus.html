@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>input_focus.html</title>
+<style>
+    body {
+        margin: 0;
+    }
+    
+    input:not(:focus) + .callout {
+        transform: scale(0);
+        /* 포커스 기능이 되는 속성에만 사용 가능 */
+    }
+    
+    .callout {
+        display: inline-block;
+        font-size: 12px;
+        color: #fff;
+        padding: 2px 20px;
+        border-radius: 15px;
+        background: orange;
+        transition: all .5s cubic-bezier(0.25, 0.1, 0.3, 1.5);
+        transform-origin: 1.4em -0.4em;
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+    <label>
+        Your usename: <input id="usename">
+        <span class="callout">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nisi!</span>
+    </label>
+</body>
+</html>

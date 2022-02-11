@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>center.html</title>
+</head>
+<body>
+<!-- 
+position: absolute와 margin 마이너스 값을 이용한 중앙 정렬
+장점 : ie7 이상 모든 브라우저에서 지원 가능합니다.
+단점 : width와 height 값이 고정 사이즈인 상태에서만 사용할 수 있습니다.
+<style>
+    .one {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: orangered;
+        margin: -50px 0 0 -50px;
+    }
+</style>   
+<div class="one"></div>
+-->
+
+
+<!--
+position: absolute와 tabel-cell을 이용한 중앙 정렬
+장점
+ie8 이상 모든 브라우저에서 지원 가능합니다.
+layer 안의 content 영역이 고정값이 아니라 가변이어도 자동으로 중앙정렬이 됩니다.
+단점
+코드 중첩이 여러번 되어야 합니다.
+<style>
+    .two {
+        position: absolute;
+        display: table;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }    
+    .two .wrap {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .two .wrap .box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: orangered;
+    }
+</style>
+<div class="two">
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+</div>
+-->
+
+
+<!--
+position: absolute와 transform을 이용한 중앙 정렬
+장점
+ie9 이상 모든 브라우저에서 지원 가능합니다. (모바일 작업시 적합)
+layer 안의 content 영역이 고정값이 아니라 가변이어도 자동으로 중앙정렬이 됩니다.
+transform 속성은 GPU가속이 가능해서 속도 향상에 도움이 됩니다.
+짧은 소스로 간결하게 만들 수 있습니다.
+단점
+모바일에서 사용시 기기별로 버그가 생길 가능성이 있습니다.
+-->
+<style>
+    .three {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+		line-height: 100px;
+        background: orangered;
+        transform: translate(-50%, -50%);
+		text-align: center;
+		color: #fff;
+    }    
+</style>
+<div class="three">중앙정렬</div>
+
+
+<!--
+position: absolute와 flex를 이용한 중앙 정렬
+장점
+ie10 이상 모든 브라우저에서 지원 가능합니다. (모바일 작업시 적합)
+layer 안의 content 영역이 고정값이 아니라 가변이어도 자동으로 중앙정렬이 됩니다.
+짧은 소스로 간결하게 만들수 있습니다.
+단점
+구버전 브라우저에서는 display:box와 병행해야 합니다.
+<style>
+    .four {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .four .box {
+        width: 100px;
+        height: 100px;
+        background: orangered;
+    }
+</style>
+<div class="four">
+    <div class="box"></div>
+</div>
+-->
+</body>
+</html>

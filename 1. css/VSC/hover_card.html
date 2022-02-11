@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+   <style>
+      .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+      .card {
+         width: 300px;
+         height: 370px;
+         margin: 10px;
+         position: relative;
+         overflow: hidden;
+         transition: 0.3s;
+      }
+      .card img {
+         width: 300px;
+         height: 370px;
+      }
+      .card:hover {
+         transform: translateY(-15px);
+         box-shadow: 0 15px 20px rgb(0 0 0 / 20%);
+         transition: all 0.3s ease-in-out;
+      }
+      .card:hover .content {
+         top: 0;
+      }
+      .content {
+         width: inherit;
+         height: inherit;
+         background: linear-gradient(to top, crimson, transparent);
+         position: absolute;
+         top: 100%;
+         left: 0;
+         padding: 20px;
+         box-sizing: border-box;
+         text-align: center;
+         color: #fff;
+         padding-top: 160px;
+         transition: 0.3s;
+      }
+      .content span {
+         display: block;
+         font-size: 12px;
+         color: gold;
+      }
+      .sns a {
+         color: #fff;
+         margin: 0 5px;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="card">
+         <img src="./images/profile.jpg">
+         <div class="content">
+            <h2>Mazedaka <span>Developer</span></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, architecto!</p>
+            <div class="sns">
+               <a href="#none"><i class="fa fa-facebook"></i></a>
+               <a href="#none"><i class="fa fa-twitter"></i></a>
+               <a href="#none"><i class="fa fa-instagram"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0; outline: none;}
+    .event_wrap {width: 1620px; margin: 0 auto; position: relative; font-family: 'Rubik', sans-serif;}
+		.event_wrap .countwrap {position: absolute; left: 0; right: 0; bottom: 0; width: 100%; max-width: 1000px; margin: 0 auto; padding: 6% 0;}
+		.event_wrap .countwrap ul.countsimple {position: relative; width: 100%; margin: 0 auto; border-width: 1px 0; overflow: hidden;}
+		.event_wrap .countwrap ul.countsimple li {position: relative; margin: 0; padding: 0; display: block; width: 25%; text-align: center; float:left;}
+		.event_wrap .countwrap ul.countsimple li .number {color: #fff; font-size: 130px; font-weight: 700;}
+		.event_wrap .countwrap ul.countsimple li .label {position: absolute; bottom: 0; left: 0; right: 0; color: #fff; font-size: 30px; font-weight: 300; text-transform: uppercase;}
+		.event_wrap .countwrap ul.countsimple li .number:after {position: absolute; top: 50%; right: -5%; content: ':'; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); font-size: 100px}
+		.event_wrap .countwrap ul.countsimple li:last-child .number:after {content: ""}
+		.event_wrap .countwrap ul.countsimple li:last-child .number:after {display: none}
+</style>
+<div class="event_wrap">
+	<div class="countwrap">
+		<ul id="countdown_timer" class="countsimple" attrdate="2022/12/30 23:59:59">
+			<li id="days">
+        <div class="number">00</div>
+        <div class="label">Days</div>
+			</li>
+			<li id="hours">
+        <div class="number">00</div>
+        <div class="label">Hours</div>
+			</li>
+			<li id="minutes">
+        <div class="number">00</div>
+        <div class="label">Minutes</div>
+			</li>
+			<li id="seconds">
+        <div class="number">00</div>
+        <div class="label">	Seconds</div>
+			</li>
+		</ul>
+	</div>
+	<img src="https://bbootxbranctory.diskn.com/champion/img/event/210507_weekend/pc_weekend.jpg">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+		var countDay = document.getElementById('countdown_timer');
+		var countAttr = $(countDay).attr('attrdate');
+		// The date you want to count down to
+		var targetDate = new Date(countAttr);   
+		// Other date related variables
+		var days;
+		var hrs;
+		var min;
+		var sec;
+		$(function() {
+		   // Calculate time until launch date
+        timeToLaunch();
+      // Transition the current countdown from 0 
+      numberTransition('#days .number', days);
+      numberTransition('#hours .number', hrs);
+      numberTransition('#minutes .number', min);
+      numberTransition('#seconds .number', sec);
+      // Begin Countdown
+      setTimeout(countDownTimer,1001);
+		});
+		function timeToLaunch(){
+			// Get the current date
+			var currentDate = new Date();
+			// Find the difference between dates
+			var diff = (currentDate - targetDate)/1000;
+			var diff = Math.abs(Math.floor(diff));  
+			// Check number of days until target
+			days = Math.floor(diff/(24*60*60));
+			sec = diff - days * 24*60*60;
+			// Check number of hours until target
+			hrs = Math.floor(sec/(60*60));
+			sec = sec - hrs * 60*60;
+			// Check number of minutes until target
+			min = Math.floor(sec/(60));
+			sec = sec - min * 60;
+		}
+		function countDownTimer(){ 
+			// Figure out the time to launch
+			timeToLaunch();
+			// Write to countdown component
+			$( "#days .number" ).text(days);
+			$( "#hours .number" ).text(hrs);
+			$( "#minutes .number" ).text(min);
+			$( "#seconds .number" ).text(sec);
+			// Repeat the check every second
+			setTimeout(countDownTimer,1000);
+		}
+		function numberTransition(id, endPoint){
+      $(id).text(this.endPoint);
+		};
+	</script>

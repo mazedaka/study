@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+      .tab-inner {height: 520px;}
+      input[name=tabmenu] {display: none;}
+      h1 {text-align: center;}
+      .tabs {position: relative; width: 800px; height: 400px; overflow: hidden;}
+      .items {position: absolute; top: 0; left: 0; width: 2400px; height: 400px; transition: 0.5s;}
+      .items div {width: 800px; height: 400px; float: left; box-sizing: border-box; text-align: center; padding: 50px;}
+      .items div img {width: 100px; border-radius: 50%;}
+      .items div p b {display: block;}
+      .items div p span {color: orange;}
+
+      .btn {text-align: center;}
+      .btn label {width: 10px; height: 10px; background: lightgray; display: inline-block; cursor: pointer; transition: 0.3s;}
+
+      input[id=tab1]:checked ~ .tabs .items {left: 0;}
+      input[id=tab2]:checked ~ .tabs .items {left: -800px;}
+      input[id=tab3]:checked ~ .tabs .items {left: -1600px;}
+
+      /* input[id=tab1]:checked ~ .tabs .items {top: 0;}
+      input[id=tab2]:checked ~ .tabs .items {top: -400px;}
+      input[id=tab3]:checked ~ .tabs .items {top: -800px;} */
+
+      input[id=tab1]:checked ~ .btn label[for=tab1],
+      input[id=tab2]:checked ~ .btn label[for=tab2],
+      input[id=tab3]:checked ~ .btn label[for=tab3] {background: crimson; border-radius: 50%;}
+   </style>
+</head>
+<body>
+   <div class="tab-inner">
+      <input type="radio" name="tabmenu" id="tab1" checked>
+      <input type="radio" name="tabmenu" id="tab2">
+      <input type="radio" name="tabmenu" id="tab3">
+
+      <h1>Testimonials</h1>
+
+      <div class="tabs">
+         <div class="items">
+            <div>
+               <img src="https://s.pstatic.net/static/www/mobile/edit/2021/0524/cropImg_196x196_63786436855956221.jpeg">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil aliquam,
+                  eos nostrum blanditiis adipisci aperiam maxime laudantium magnam doloribus culpa at eaque sequi perferendis nesciunt! Beatae, quisquam.
+                  Aperiam magnam, tenetur culpa minus reiciendis voluptatem at, soluta delectus, dolorum beatae eaque.</p>
+               <p>
+                  <b>Ackerley</b>
+                  Media Analyst at <span>ZenDesk</span>
+               </p>
+            </div>
+            <div>
+               <img src="https://s.pstatic.net/static/www/mobile/edit/2021/0524/cropImg_196x196_63786436855956221.jpeg">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil aliquam,
+                  eos nostrum blanditiis adipisci aperiam maxime laudantium magnam doloribus culpa at eaque sequi perferendis nesciunt! Beatae, quisquam.
+                  Aperiam magnam, tenetur culpa minus reiciendis voluptatem at, soluta delectus, dolorum beatae eaque.</p>
+               <p>
+                  <b>Ackerley</b>
+                  Media Analyst at <span>ZenDesk</span>
+               </p>
+            </div>
+            <div>
+               <img src="https://s.pstatic.net/static/www/mobile/edit/2021/0524/cropImg_196x196_63786436855956221.jpeg">
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil aliquam,
+                  eos nostrum blanditiis adipisci aperiam maxime laudantium magnam doloribus culpa at eaque sequi perferendis nesciunt! Beatae, quisquam.
+                  Aperiam magnam, tenetur culpa minus reiciendis voluptatem at, soluta delectus, dolorum beatae eaque.</p>
+               <p>
+                  <b>Ackerley</b>
+                  Media Analyst at <span>ZenDesk</span>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <div class="btn">
+         <label for="tab1"></label>
+         <label for="tab2"></label>
+         <label for="tab3"></label>
+      </div>
+   </div>
+</body>
+</html>

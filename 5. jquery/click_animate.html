@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>css 스타일 변경하기</title>
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	<header class="page-header" role="banner">
+		<h1>Creative jQuery Sample</h1>
+	</header>
+	<div class="page-main" role="main">
+		<div id="typo">
+			<div class="inner">Creative jQuery</div>
+		</div>
+	</div>
+
+	<!-- 제이쿼리 하위버전 (익스9 이하 호환가능) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+	<!-- 제이쿼리 UI -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function(){
+			$('#typo .inner').click(function(){
+
+				// 선택자.animate({속성:값, 속성:값}, 시간, 이징, 다른 할 일);
+				// linear, swing, easeOutBounce - https://api.jqueryui.com/easings
+				// function() {다른 할 일}
+
+				// width, opacity, fontSize 등의 수치가 바뀌는것만 가능하다.
+				// backgroundColor등의 값을 변경하려면 jquery-ui를 연결해야된다.
+
+				$(this).animate({opacity: 0, fontSize: '0px'}, 1500, 'easeInOutElastic',
+					function(){
+						$(this).animate({opacity: 1, fontSize: '110px'}, 300);
+				});
+			});
+		});
+	</script>
+</body>
+</html>

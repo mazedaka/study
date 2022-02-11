@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style>
+		* {margin: 0; padding: 0; outline: none; font-size: 0;}
+		.simply-scroll-clip {width: 1920px; height: 1180px; margin: 0 auto; overflow: hidden;}
+		.simply-scroll-clip img {width: 3511px;}
+	</style>
+</head>
+
+<body>
+	<div class="event_wrap">
+		<section class="sec_01">
+			<div id="scroller">
+				<img src="https://bbootxbranctory.diskn.com/champion/img/event/210906_MH_lookbook/pc/pc_MHlookbook_cover_H1180_BG_.jpg">
+				<!-- 무한루프 안될시 위의 1개로된 이미지를 최소 2개이상으로 나눠서 진행 -->
+			</div>
+		</section>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://mazedaka.co.kr/test/champion/jquery.simplyscroll.min.js"></script>
+	<script>
+		$("#scroller").simplyScroll({
+			customClass: 'simply-scroll', // default class
+			frameRate: 300, // No of movements per second
+			speed: 1, // Intended no. of pixels per frame
+			orientation: 'horizontal', // 'horizontal or 'vertical' - not to be confused with device orientation 
+			auto: true, // autoplay
+			autoMode: 'loop', // if auto == true, use 'loop' or 'bounce',
+			manualMode: 'end', // if auto == false, use 'loop' or 'end'
+			direction: 'forwards', // 'forwards' or 'backwards'.
+			pauseOnHover: true, // if autoMode == loop || bounce only
+			pauseOnTouch: true, // touch device only
+			pauseButton: false, // generates an extra element to allow manual pausing
+			startOnLoad: false, // use this to delay starting of plugin until all page assets have loaded
+			initialOffset: 0 // initial offset in pixels
+		});
+	</script>
+</body>
+</html>

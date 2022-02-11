@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+  section {
+    width: 100%;
+    /* border: 1px solid #000; */
+  }
+  .btn {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .btn li {
+    float: left;
+    border: 1px solid red;
+    background: #ccc;
+  }
+  .btn li.active {
+    background: #fff;
+  }
+  .tabs {}
+  .tabs div {
+    border: 1px solid red;
+    height: 200px;
+    display: none;
+  }
+  .tabs div.active {
+    display: block;
+  }
+  </style>
+</head>
+
+<body>
+  <section>
+    <ul class="btn">
+      <li data-hak="tab1" class="active">html5</li>
+      <li data-hak="tab2">css</li>
+      <li data-hak="tab3">jquery</li>
+      <li data-hak="tab4">javascript</li>
+      <li data-hak="tab5">php</li>
+    </ul>
+    <div class="tabs">
+      <div id="tab1" class="active">tab1</div>
+      <div id="tab2">tab2</div>
+      <div id="tab3">tab3</div>
+      <div id="tab4">tab4</div>
+      <div id="tab5">tab5</div>
+    </div>
+  </section>
+
+  <script>
+    $('.btn li').click(function(){
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+
+      var tab = $(this).attr('data-hak')
+      $('.tabs div').removeClass('active') // 우선 tab1 ~ 5 div를 감추고 시작한다.
+      $('#' + tab).addClass('active') // 그 다움에 클릭한 div만 보여준다. 순서가 중요함!!
+    })
+  </script>
+</body>
+</html>

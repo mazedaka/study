@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+   <style>
+      body {
+         /* background: url('https://demo.kallyas.net/makeupartist/wp-content/uploads/sites/49/2017/03/kallyas-makeup.jpg');
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-attachment: fixed; */
+         background: url('https://demo.kallyas.net/makeupartist/wp-content/uploads/sites/49/2017/03/kallyas-makeup.jpg') no-repeat left center fixed;
+         background-size: cover;
+      }
+      body::before {
+         content: '';
+         position: absolute;
+         background: rgba(0, 0, 0, 0.5);
+         width: 100%;
+         height: 100%;
+         left: 0;
+         top: 0;
+         z-index: -1;
+      }
+      .search {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 500px;
+         text-align: center;
+      }
+      h1 {
+         text-align: center;
+         color: #fff;
+         font-size: 25px;
+      }
+      input[type=text],
+      input[type=submit] {
+         padding: 20px;
+         border: none;
+         outline: none;
+         box-sizing: border-box;
+		 vertical-align: middle;
+      }
+      input[type=text] {
+         width: 400px;
+         margin-right: -6px;
+         border-radius: 40px 0 0 40px;
+         padding-left: 30px;
+      }
+      input[type=text]::placeholder {
+         font-style: italic;
+      }
+      input[type=submit] {
+         width: 100px;
+         border-radius: 0 40px 40px 0;
+         cursor: pointer;
+         background: orange;
+         color: #fff;
+         transition: 0.3s;
+      }
+      input[type=submit]:hover {
+         background: orangered;
+      }
+   </style>
+</head>
+<body>
+   <form action="https://www.google.co.kr/search" method="GET" class="search">
+      <h1>What are you looking for?</h1>
+      <input type="text" name="q" placeholder="Type...">
+      <input type="submit" value="Search">
+   </form>
+</body>
+</html>

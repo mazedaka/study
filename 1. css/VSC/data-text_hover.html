@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+      a {
+         text-decoration: none;
+      }
+      .gnb a {
+         width: 300px;
+         height: 40px;
+         display: block;
+         position: relative;
+         overflow: hidden;
+      }
+      .gnb a::before,
+      .gnb a::after {
+         content: attr(data-text);
+         position: absolute;
+         width: inherit;
+         height: inherit;
+         text-align: center;
+         line-height: 40px;
+         color: #fff;
+         text-transform: uppercase;
+         transition: 0.3s;
+      }
+      .gnb a::before {
+         background: crimson;
+         top: 0;
+      }
+      .gnb a::after {
+         background: royalblue;
+         top: 100%;
+         content: attr(data-text2);
+      }
+      .gnb a:hover::before {
+         top: -100%;
+      }
+      .gnb a:hover::after {
+         top: 0;
+      }
+   </style>
+</head>
+<body>
+   <div class="gnb">
+      <a href="#none" data-text="Lorem ipsum dolor sit amet" data-text2="mazedaka"></a>
+   </div>
+</body>
+</html>

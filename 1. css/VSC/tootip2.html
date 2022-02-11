@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {display: flex; justify-content: center; align-items: center; height: 100vh;}
+    .icon {border: 1px solid red; width: 100px; height: 100px; position: relative;}
+    .icon:hover span {opacity: 1;}
+    .icon img {width: 100px;}
+    .icon span {position: absolute; top: -90px; left: 50%; transform: translateX(-50%); width: 300px; background: #000; color: #fff; padding: 10px;border-radius: 5px; text-align: center; opacity: 0; transition: 0.3s; pointer-events: none;}
+    .icon span::after {content: ''; position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px; height: 10px; background: #000;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <img src="https://www.flaticon.com/svg/vstatic/svg/1216/1216733.svg?token=exp=1617682596~hmac=52b78b439a7d50b8eebe175e5f78ab07">
+      <span>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, accusamus?
+      </span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>img_scale.html</title>
+<style>
+    img {
+        max-width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover img {
+        transform: scale(1.2);
+    }
+
+    .box {
+        width: 300px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box"><img src="http://mazedaka.dothome.co.kr/design/img/img4.jpg"></div>
+        <div class="box"><img src="http://mazedaka.dothome.co.kr/design/img/img5.jpg"></div>
+        <div class="box"><img src="http://mazedaka.dothome.co.kr/design/img/img6.jpg"></div>
+    </div>
+</body>
+</html>

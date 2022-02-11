@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {margin: 0; padding: 0;}
+    body {display: flex; justify-content: center; align-items: center; height: 100vh;}
+    input[type=checkbox]#toggle-btn {display: none;}
+    label[for=toggle-btn] {
+      text-indent: -99999em;
+      width: 100px;
+      height: 50px;
+      background: #ACC7B4;
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+      transition: .4s;
+    }
+    input[type=checkbox]#toggle-btn:checked + label {
+      background: #331B3F;
+    }
+    label[for=toggle-btn]::before {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      background: #331B3F;
+      left: 6px;
+      top: 6px;
+      border-radius: 20px;
+      transition: .4s;
+    }
+    input[type=checkbox]#toggle-btn:checked + label::before {
+      background: #ACC7B4;
+      left: 55px;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="toggle-btn">
+  <label for="toggle-btn">
+    on/off btn
+  </label>
+</body>
+</html>

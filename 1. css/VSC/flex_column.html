@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap">
+
+
+  <style>
+    body {
+      margin: 0;
+    }
+    .gallery {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+    .gallery li {
+      border-right: 5px solid #000;
+      flex: 1;
+      transition: 0.5s;
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery li:last-child {
+      border-right: none;
+    }
+    .gallery li:nth-child(1) {
+      background: url('https://images.unsplash.com/photo-1619509865521-4bbe0acaaa27?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') no-repeat center / cover;
+    }
+    .gallery li:nth-child(2) {
+      background: url('https://images.unsplash.com/photo-1619536663636-9fb9a692fc15?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') no-repeat center;
+    }
+    .gallery li:nth-child(3) {
+      background: url('https://images.unsplash.com/photo-1619219333675-0bbe269932b7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') no-repeat center;
+    }
+    .gallery li:nth-child(4) {
+      background: url('https://images.unsplash.com/photo-1617816983555-7e342795dc0e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') no-repeat center;
+    }
+    .gallery li:nth-child(5) {
+      background: url('https://images.unsplash.com/photo-1618688961306-0fd4345a73b8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max') no-repeat center;
+    }
+    .gallery:hover li {
+      flex: 1;
+      
+    }
+    .gallery li:hover {
+      flex: 2.8;
+      filter: grayscale(1);
+    }
+    /* .gallery li:not(:hover) {
+      flex: 0.9;
+    } */
+    .content {
+      position: absolute;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      bottom: -320px;
+      height: 250px;
+      transition: 0.5s;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .content .sns {
+      color: #333;
+    }
+    .content::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -10px;
+      width: 100%;
+      height: 70px;
+      background: #000;
+      transform-origin: left bottom;
+      transform: rotate(-3deg) scale(1.3);
+    }
+    .gallery li:hover .content {
+      bottom: 0;
+      transition-delay: 0.2s;
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <ul class="gallery">
+    <li>
+      <div class="content">
+        <h2>Uploads made easy</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint exercitationem magni! Nostrum, corrupti eius odit tempore repellendus dolorem possimus?</p>
+        <div class="sns">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        <h2>Uploads made easy</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint exercitationem magni! Nostrum, corrupti eius odit tempore repellendus dolorem possimus?</p>
+        <div class="sns">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        <h2>Uploads made easy</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint exercitationem magni! Nostrum, corrupti eius odit tempore repellendus dolorem possimus?</p>
+        <div class="sns">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        <h2>Uploads made easy</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint exercitationem magni! Nostrum, corrupti eius odit tempore repellendus dolorem possimus?</p>
+        <div class="sns">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        <h2>Uploads made easy</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt sint exercitationem magni! Nostrum, corrupti eius odit tempore repellendus dolorem possimus?</p>
+        <div class="sns">
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</body>
+</html>

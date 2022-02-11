@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {margin: 0; padding: 0; outline: none;}
+      .wrap {width: 1920px; margin: 0 auto;}
+   
+      .evt {position: relative; width: 1200px; margin: 0 auto;}
+      .evt .btn {position: absolute; width: 38px; height: 38px; background: url('https://prd-static-fnf-online-mall.s3.ap-northeast-2.amazonaws.com/webresource/mlb-korea/motioneye/2021/0115_ttst/pc/btn_preview.png') no-repeat;}
+
+      /* opacity img영역 잡히는부분*/
+      .evt .btn-over {overflow: hidden;}
+      .evt .btn-over:hover {overflow: visible;}
+      /* opacity img영역 잡히는부분*/
+
+      .evt .btn01 img {display: none;}
+      .evt .btn01:hover img {display: block;}
+      .evt .btn01 {top: 80px; left: 460px; border: 2px solid blue;}
+
+      .evt .btn02 img {opacity: 0; transition: all .3s;}
+      .evt .btn02:hover img {opacity: 1;}
+      .evt .btn02 {top: 380px; left: 460px; border: 2px solid red;}
+   </style>
+</head>
+<body>
+   <div class="wrap">
+      <section class="evt">
+         <a href="" class="btn btn01"><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fwww%2Fmobile%2Fedit%2F2021%2F0207%2Fupload_1612681595716QiALR.jpg%22&type=nf340_228"></a>
+         <a href="" class="btn btn02 btn-over"><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fstatic%2Fwww%2Fmobile%2Fedit%2F2021%2F0207%2Fupload_1612681595716QiALR.jpg%22&type=nf340_228"></a>
+      </section>
+   </div>
+</body>
+</html>

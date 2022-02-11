@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+  <style>
+    body {font-family: 'Noto Sans KR', sans-serif; color: #222; margin: 0; padding: 0;}
+    a {text-decoration: none; color: #222;}
+    h1 {font-weight: normal;}
+    section {display: flex; justify-content: center; align-items: center; height: 100vh;}
+    section article {width: 980px; height: 500px; border: 1px solid red;}
+    .heading {text-align: center;}
+    .heading h1 {font-size: 34px; margin: 40px 0 10px;}
+    .heading h1 em {font-style: normal; position: relative;}
+    .heading h1 em::after {content: url('./img/icon-kakao2.png'); position: absolute; top: -32px; left: 52px;}
+    /* .heading h1 em::after {content: ''; background: url('./img/icon-kakao.png') no-repeat; width: 50px; height: 50px; position: absolute; top: -32px; left: 52px; background-size: 50px 50px;} */
+    .content {overflow: hidden;}
+    .content > div {width: 50%; height: 400px; float: left; box-sizing: border-box;}
+    .accodion {}
+    .accodion .title {border: 1px solid #ddd; border-radius: 3px; cursor: pointer; position: relative; padding: 5px 0 5px 20px; transition: 0.3s; margin-bottom: 10px;}
+    .accodion .title::after {content: '\f105'; font-family: fontawesome; position: absolute; right: 20px; top: 8px;}
+    .accodion .title:hover {background: #203049; color: #fff;}
+    .accodion .title.active {background: #203049; color: #fff; transition: 0.3s;}
+    .accodion .title.active::after {transform: rotate(90deg); color: goldenrod;}
+    .accodion .description {padding: 20px; display: none;}
+    .accodion .description.active {display: block;}
+    .image {}
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>
+      <div class="heading">
+        <h1><em>카톡</em> 간편 회원가입, <b>인학이</b>만 따라오세요.</h1>
+      </div>
+      <div class="content">
+        <div class="accodion">
+          <div class="title active" data-image="./img/profile01.jpeg">인생이란 무엇인가?</div>
+          <div class="description active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos suscipit dolores, magnam fuga provident eligendi dicta voluptatibus voluptas ea molestiae esse sint itaque ducimus voluptates alias ut error perspiciatis facilis officia labore. In, dolorum omnis exercitationem dolore itaque eveniet!</div>
+
+          <div class="title" data-image="./img/profile02.jpeg">돈이란 무엇인가?</div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos suscipit dolores, magnam fuga provident eligendi dicta voluptatibus voluptas ea molestiae esse sint itaque ducimus voluptates alias ut error perspiciatis facilis officia labore. In, dolorum omnis exercitationem dolore itaque eveniet!</div>
+
+          <div class="title" data-image="./img/profile03.jpeg">사랑이란 무엇인가?</div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos suscipit dolores, magnam fuga provident eligendi dicta voluptatibus voluptas ea molestiae esse sint itaque ducimus voluptates alias ut error perspiciatis facilis officia labore. In, dolorum omnis exercitationem dolore itaque eveniet!</div>
+
+          <div class="title">삶이란 무엇인가?</div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos suscipit dolores, magnam fuga provident eligendi dicta voluptatibus voluptas ea molestiae esse sint itaque ducimus voluptates alias ut error perspiciatis facilis officia labore. In, dolorum omnis exercitationem dolore itaque eveniet!</div>
+        </div>
+        <div class="image">
+          <img src="./img/profile01.jpeg">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('.title').click(function(){
+      $(this).addClass('active');
+      $(this).siblings('.title').removeClass('active');
+      $(this).siblings('.description').stop().slideUp();
+      $(this).next().stop().slideDown();
+
+      var dataImage = $(this).attr('data-image')
+      $('.image img').attr('src', dataImage)
+    });
+  </script>
+</body>
+</html>

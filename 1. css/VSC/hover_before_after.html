@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background: #32465f;
+      }
+      a {
+         text-decoration: none;
+         color: #fff;
+      }
+      .gnb a {
+         width: 300px;
+         height: 40px;
+         display: block;
+         text-align: center;
+         line-height: 40px;
+         position: relative;
+         transition: 0.3s;
+      }
+      .gnb a::before,
+      .gnb a::after {
+         content: '';
+         width: inherit;
+         height: inherit;
+         position: absolute;
+         top: 0;
+         left: 0;
+         transition: 0.3s;
+         border: 1px solid rgba(255, 255, 255, 0.212);
+         background: rgba(255, 255, 255, 0.05);
+      }
+      .gnb a:hover {
+         background: none;
+         border: 0;
+         letter-spacing: 5px;
+      }
+      .gnb a:hover::before {
+         transform: rotate(45deg);
+         background: transparent;
+      }
+      .gnb a:hover::after {
+         transform: rotate(-45deg);
+         background: transparent;
+      }
+   </style>
+</head>
+<body>
+   <div class="gnb">
+      <a href="#none">mazedaka</a>
+   </div>
+</body>
+</html>

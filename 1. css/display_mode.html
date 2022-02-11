@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>display_mode.html</title>
+<style>
+	h2 {
+		text-align: center;
+		color: #fff;
+	}
+
+	.portrait {
+		background: url('https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2019%2F01%2Feastlogue-spring-summer-collection-lookbook-00.jpg?fit=max&cbr=1&q=90&w=750&h=500') no-repeat center;
+		background-size: cover;
+	}
+
+	.landscape {
+		background: url('https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2019%2F01%2Fnike-sb-tom-sach-mars-yard-team-classic-000.jpg?fit=max&cbr=1&q=90&w=750&h=500') no-repeat center;
+		background-size: cover;
+	}
+
+	@media only screen and (max-device-width: 1024px) and (orientation:portrait) {  /* 세로 모드에서 노출되는 영역 */
+		.landscape {display: none;}
+	}
+	@media only screen and (max-device-width: 1024px) and (orientation:landscape) {  /* 가로 모드에서 노출되는 영역 */
+		.portrait {display: none;}
+	}    
+</style>
+</head>
+<body>
+    <h2 class="portrait">세로 모드에서 표시</h2>
+    <h2 class="landscape">가로 모드에서 표시</h2>
+</body>
+</html>

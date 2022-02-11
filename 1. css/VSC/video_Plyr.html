@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+</head>
+<style>
+  body {width: 1920px; margin: 0 auto;}
+  section {position: relative;}
+  section:nth-of-type(2) {height: 200vh;}
+  .video_warp {position: absolute; top: 310px; left: 890px; width: 960px;}
+
+  :root {
+    /* --plyr-color-main: #EEA47F;
+    --plyr-video-control-color: #00539C; */
+    /* --plyr-range-thumb-background: #EEA47F; */
+  }
+  @media (min-width: 480px) {
+    .plyr--video .plyr__controls {padding-top: 10px;}
+  }
+  .plyr--video .plyr__controls {background: rgba(0,0,0,0.6);}
+  /* input[data-plyr="seek"] {border: 1px solid red;} */
+  /* .plyr__controls .plyr__controls__item.plyr__progress__container {position: absolute; top: -12px; left: 0; width: 100%;}
+  .plyr__controls .plyr__controls__item:first-child {margin-left: 0; margin-right: 0;}
+  .plyr__controls .plyr__controls__item:nth-of-type(3) {margin-left: 0; margin-right: auto;}
+  .plyr--video.plyr--hide-controls .plyr__controls {opacity: 1;} */
+</style>
+<body>
+  <section>
+    <div class="video_warp">
+      <video id="player" playsinline controls data-poster="">
+        <source src="https://mazedaka.co.kr/test/champion/video/version2.mp4" type="video/mp4">
+      </video>  
+    </div>
+    <img src="https://bbootxbranctory.diskn.com/champion/img/event/210923_SMU padding/pc/pc_SMU-padding_02.jpg">
+  </section>
+
+  <section></section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+  <script>
+    var controls =
+    [
+      'play-large', // The large play button in the center
+      // 'restart', // Restart playback
+      'rewind', // Rewind by the seek time (default 10 seconds)
+      'play', // Play/pause playback
+      'fast-forward', // Fast forward by the seek time (default 10 seconds)
+      'progress', // The progress bar and scrubber for playback and buffering
+      'current-time', // The current time of playback
+      'duration', // The full duration of the media
+      'mute', // Toggle mute
+      'volume', // Volume control
+      'captions', // Toggle captions
+      'settings', // Settings menu
+      'pip', // Picture-in-picture (currently Safari only)
+      'airplay', // Airplay (currently Safari only)
+      // 'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+      'fullscreen', // Toggle fullscreen
+    ];
+
+    const player = new Plyr('#player', { controls });
+  </script>
+</body>
+</html>
+

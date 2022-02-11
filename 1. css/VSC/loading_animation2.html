@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .loading {
+      position: relative;
+      width: 20px;
+      height: 20px;
+    }
+    .loading span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background: cornflowerblue;
+      animation: loading 1s infinite;
+    }
+    .loading span:nth-child(1) {}
+    .loading span:nth-child(2) {animation-delay: .5s;}
+    
+    @keyframes loading {
+      25% {
+        top: 0;
+        left: calc(100% - 5px);
+        background: crimson;
+      }
+      50% {
+        top: calc(100% - 5px);
+        left: calc(100% - 5px);
+        background: darkgreen;
+      }
+      75% {
+        top: calc(100% - 5px);
+        left: 0;
+        background: darkorange;
+      }
+      100% {
+        top: 0;
+        left: 0;
+        background: chocolate;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <span></span>
+    <span></span>
+  </div>
+</body>
+</html>

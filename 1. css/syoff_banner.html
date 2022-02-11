@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>syoff_banner.html</title>
+<link rel="stylesheet" type="text/css" href="/common/bootstrap/bootstrap.min.css">
+<style>
+	#three-banner {
+		width: 1200px;
+		margin: 50px auto;
+	}
+
+	#three-banner .wrap {
+		position: relative;
+		display: inline-block;
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	#three-banner .wrap:hover .skin-box span {
+		opacity: 1;
+		top: 25px;
+		bottom: 25px;
+		left: 25px;
+		right: 25px;
+	}
+
+	#three-banner .skin-box span {
+		position: absolute;
+		background: rgba(0,0,0,0.7);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transition: all 0.3s ease;
+		opacity: 0;
+	}
+
+	#three-banner .text {
+		position: absolute;
+		bottom: -100px;
+		text-align: center;
+		left: 0;
+		right: 0;
+		color: #fff;
+		transition: all 0.3s ease;
+		font-size: 10px;
+	}
+
+	#three-banner .wrap:hover .text {
+		bottom: 50%;
+		transform: translateY(50%);
+	}
+
+	#three-banner .text hr {
+		width: 0;
+		height: 0;
+		transition: all 0.9s ease;
+	}
+
+	#three-banner .text p {
+		font-size: 12px;
+		color: #ddd;
+	}
+
+	#three-banner .wrap:hover .text hr {
+		width: 100px;
+	}
+</style>
+</head>
+<body>
+	<section id="three-banner">
+		<div class="col-xs-24 col-sm-8 col-md-8 col-lg-8">
+			<div class="wrap">
+				<div class="skin-box">
+					<span></span>
+					<img src="https://source.unsplash.com/random" class="img-responsive">
+				</div>
+				<div class="text">
+					<h4>kleanthous main title</h4>
+					<hr>
+					<p>sub text</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-24 col-sm-8 col-md-8 col-lg-8">
+			<div class="wrap">
+				<div class="skin-box">
+					<span></span>
+					<img src="https://source.unsplash.com/random" class="img-responsive">
+				</div>
+				<div class="text">
+					<h4>kleanthous main title</h4>
+					<hr>
+					<p>sub text</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-24 col-sm-8 col-md-8 col-lg-8">
+			<div class="wrap">
+				<div class="skin-box">
+					<span></span>
+					<img src="https://source.unsplash.com/random" class="img-responsive">
+				</div>
+				<div class="text">
+					<h4>kleanthous main title</h4>
+					<hr>
+					<p>sub text</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
